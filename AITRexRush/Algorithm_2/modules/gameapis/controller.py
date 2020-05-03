@@ -19,6 +19,7 @@ from selenium.webdriver.chrome.options import Options
 class GameController():
 	def __init__(self, cfg, **kwargs):
 		chrome_options = Options()
+		chrome_options.add_argument("--no-sandbox")
 		# chrome_options.add_argument("disable-infobars")
 		self.driver = webdriver.Chrome(
 										executable_path=cfg.DRIVER_PATH,
